@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,8 +41,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDkiIPsWhvzZqXMs82bfSBxIP8SF4A-He0',
+  static late final FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_WEB']!,
     appId: '1:179007539739:web:c5bad7f299fcef6090c6be',
     messagingSenderId: '179007539739',
     projectId: 'chatting-4faf6',
@@ -51,8 +52,8 @@ class DefaultFirebaseOptions {
     measurementId: 'G-7DPVXGP26Z',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAcEOFUembFNxpRd8w5pp3OL81nE3QGbjw',
+  static late final FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_AND']!,
     appId: '1:179007539739:android:03b6e363c2d1863290c6be',
     messagingSenderId: '179007539739',
     projectId: 'chatting-4faf6',
@@ -60,8 +61,8 @@ class DefaultFirebaseOptions {
     storageBucket: 'chatting-4faf6.firebasestorage.app',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCpQe6j_LSIJ349qzPQc9T-JI4zBMsT9N4',
+  static late final FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_IOS']!,
     appId: '1:179007539739:ios:3afe53996af4ea9890c6be',
     messagingSenderId: '179007539739',
     projectId: 'chatting-4faf6',
@@ -70,8 +71,8 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.adminUser',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCpQe6j_LSIJ349qzPQc9T-JI4zBMsT9N4',
+  static late final FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_MAC']!,
     appId: '1:179007539739:ios:3afe53996af4ea9890c6be',
     messagingSenderId: '179007539739',
     projectId: 'chatting-4faf6',
@@ -80,8 +81,8 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.adminUser',
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDkiIPsWhvzZqXMs82bfSBxIP8SF4A-He0',
+  static late final FirebaseOptions windows = FirebaseOptions(
+    apiKey:dotenv.env['API_KEY_WIN']!,
     appId: '1:179007539739:web:30319949f6af8e6790c6be',
     messagingSenderId: '179007539739',
     projectId: 'chatting-4faf6',
